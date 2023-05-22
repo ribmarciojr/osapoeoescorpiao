@@ -5,7 +5,7 @@ export const RecentPost = ({content}) => {
         const initialAnchor = content.content.split('href="') 
         const finalAnchor = initialAnchor[1].split('"') 
         const myLink = finalAnchor[0]
-
+  
         return(
             <div className="recent-post">
               <MyImageComponent myLink={myLink} key={content.title}/>
