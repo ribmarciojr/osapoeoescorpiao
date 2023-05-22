@@ -104,6 +104,40 @@
     color: black;
   }
 
+@media screen and  (max-width: 767px){
+  .content-section{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .last-post img {
+    width: 150px;
+    height: 120px;
+    
+  }
+
+  .aside-content, aside{
+    width: 100%;
+  }
+
+  .last-post p{
+    font-size: 0.8em;
+  }
+
+  .every-aside {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    justify-content: left;
+    gap: 30px;
+    
+  }
+
+  .aside-content > h2:first-child{
+    margin-left: 10px;
+  }
+}
+
   @media (min-width: 992px) and (max-width: 1500px){
     .content-section{
       padding: 10px 20px;

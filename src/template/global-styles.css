@@ -121,6 +121,42 @@ a {
   color: #f3f3f9;
 }
 
+.banner-author{
+  color: #f3f3f9;
+}
+
+@media screen and  (max-width: 767px){
+    .banner-section{
+      flex-direction: column;
+      gap: 20px;
+      justify-content: left;
+
+    }
+
+    .main-banner img {
+      width: max(200px);
+      height: max(165px);
+      border-radius: 10px;
+      transform: scaleX(-1);
+      margin-top: 30px;
+    }
+
+    .banner-text {
+      /* border: 1px solid pink; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100px;
+      width: 200px;
+      font-size: 1em;
+    }
+
+    .banner-author{
+      margin-top: 10px;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1500px){
   .main-banner img {
     width: 240px;

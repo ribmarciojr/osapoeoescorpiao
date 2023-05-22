@@ -30,3 +30,9 @@ ul{
 .menu li:hover{
     background-color: black;
 }
+
+@media screen and  (max-width: 767px){
+    ul {
+        gap: 10px;
+    }
+}

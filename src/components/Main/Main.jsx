@@ -31,7 +31,7 @@ export const Main = ({id}) => {
     <aside>
       <section className='aside-content'>
         <h2>Textos passados:</h2>          
-        {!!main && main.items.map(post => <Link to={`/explore/${post.id}`}><RecentPost content={post}/></Link>)}
+        <div className="every-aside">{!!main && main.items.map(post => <Link to={`/explore/${post.id}`}><RecentPost content={post}/></Link>)}</div>
       </section>
     </aside>
     </section> 

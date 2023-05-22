@@ -62,7 +62,7 @@ export const App = () => {
             <blockquote className="banner-blackquote open" id='banner-quote'>
               
             </blockquote> 
-            <small><i>~Bataille, Georges</i></small>
+            <small className='banner-author'><i>~Bataille, Georges</i></small>
           </span>  
         </section>
       </article>
