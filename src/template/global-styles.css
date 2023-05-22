@@ -7,6 +7,7 @@
 #f3f3f9
 */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +44,6 @@ a {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  color: burlywood;
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -55,41 +55,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: burlywood;
 }
-
-.App ul{
-  width: 80%;
-  margin: auto;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 60px;
-  /* border: 1px solid pink; */
-  
-}
-
-.sticky {
-  position: fixed;
-	top: 0;
-	z-index: 100;
-  width: 100vw;
-}
-
-.menu{
-  background: linear-gradient(to bottom, #000, #6600003c);
-}
-
-.menu li{
-  font-size: 1.2em;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.menu li:hover{
-  background-color: black;
-}
-
 
 /* .App .banner-section{
   width: 89vw;
@@ -102,6 +69,7 @@ a {
   width: max(300px);
   height: max(250px);
   border-radius: 10px;
+  transform: scaleX(-1);
 }
 
 .banner-article {
@@ -144,80 +112,6 @@ a {
   font-size: 1.2em;
 }
 
-.content-article {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #181719;
-}
-
-.content-section{
-  display: flex;
-  align-items: top;
-  justify-content: center;
-  width: 80%;
-  background-color: #27242c;
-  gap: 10%;
-  padding: 10px 0;
-}
-
-.last-post > h2:first-child{
-  display: flex;
-  justify-self: right;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 2.0em;
-  margin-bottom: 20px;
-}
-
-.last-post p, .last-post{
-  color: #f3f3f9;
-  font-family:'Libre Baskerville', serif;
-  font-size: 1.2em;
-}
-
-.last-post img {
-  width: max(250px);
-  height: max(150px);
-  margin: 20px 20px auto;
-}
-
-.last-post-title {
-  font-size: 1.6em;
-}
-
-.recent-post {
-  display: flex;
-  background-color: gray;
-  width: 80%;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid pink;
-  margin-bottom: 20px;
-  transition: transform 250ms ease-in-out;
-}
-
-.recent-post:hover{
-  transform: scale(1.1);
-}
-
-.recent-post img {
-  width: 20%;
-}
-
-.recent-post h2{
-  margin: auto;
-  align-self:center;
-}
-
-.aside-content > h2:first-child{
-  display: flex;
-  justify-self: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 2.0em;
-  margin-bottom: 20px;
-  color: #f3f3f9;
-}
-
 .footer{
   display: flex;
   align-items: center;
@@ -227,32 +121,21 @@ a {
   color: #f3f3f9;
 }
 
-article{
-  display: flex;
-  justify-content: space-around;
-  color: black;
-  /* border: 1px solid black; */
-}
+@media (min-width: 992px) and (max-width: 1500px){
+  .main-banner img {
+    width: 240px;
+    height: max(200px);
+    border-radius: 10px;
+    transform: scaleX(-1);
+  }
 
-main{
-  width: 50%;
-  /* border: 1px solid black; */
+  .banner-section{
+    gap: 0px;
+  }
 
-}
+  .banner-section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-aside {
-  width: 30%;
-  /* border: 1px solid black; */
-}
-
-main img{
-  width: 100px;
-  height: 100px;
-  background-attachment: fixed;
-}
-
-main p{
-  display: flex;
-  justify-content: left;
-  color: black;
 }

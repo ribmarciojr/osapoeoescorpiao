@@ -1,0 +1,32 @@
+ul{
+    width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+    color: burlywood;
+    /* border: 1px solid pink; */
+}
+
+.sticky {
+    position: fixed;
+      top: 0;
+      z-index: 100;
+    width: 100vw;
+}
+
+.menu{
+    background: linear-gradient(to bottom, #000, #6600003c); 
+}
+  
+.menu li{
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 10px;
+}
+  
+.menu li:hover{
+    background-color: black;
+}

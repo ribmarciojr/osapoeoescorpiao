@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
+import { Header } from '../components/Header/Header';
+import { Main } from '../components/Main/Main';
+import '../components/Main/style.css'
 import './global-styles.css';
-import { useEffect, useState, Image } from 'react';
-import { RecentPost } from '../components/RecentPost';
 //todo Map of recent post
 //todo Refactor CSS
 //todo call Letterboxd API
@@ -9,14 +11,6 @@ import { RecentPost } from '../components/RecentPost';
 
 export const App = () => {
   //const url = `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_BLOG_ID}?key=${process.env.REACT_APP_API_KEY}`
-  const [main, setMain] = useState(0)
-  const page = `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_BLOG_ID}/posts?key=${process.env.REACT_APP_API_KEY}`
-
-  useEffect(() => {
-    fetch(page)
-    .then(json => json.json())
-    .then(object => setMain(object))
-  }, [page])
 
   const data = {
     bannerText: "Meu privilégio é o de ser humilhado por minha estupidez profunda, e, decerto, através dos outros, percebo uma estupidez ainda maior."
@@ -33,14 +27,6 @@ export const App = () => {
     })
   }
 
-  const transformTime = (string_time) => {
-    const t = string_time.split("T")
-    const b = t[1].split("-")
-
-    console.log(t[0] + b[1])
-    return `${t[0]} ${b[1]}`
-  }
-
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver((entries) => {
       const quote = document.querySelector('#banner-quote')
@@ -48,7 +34,6 @@ export const App = () => {
         
         quote.className = "banner-blackquote loading"
         typeWriter(quote, data.bannerText)
-        console.log(entries)
       }
     });
 
@@ -59,17 +44,8 @@ export const App = () => {
 
   return (
     <div className="App">
-      <header className='sticky'>
-        <nav className='menu'>
-          <ul>
-            <a href='#first-mid-div'><li>Home</li></a>
-            <li>Explore</li>
-            <li>Movies</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-      </header>
       
+      <Header />
       <div className='title'>
         <h1>O sapo e o escorpião</h1>
       </div>
@@ -79,7 +55,7 @@ export const App = () => {
       <article className='banner-article'>
         <section className='banner-section'>
           <div className="main-banner">
-            <img src={require("./bataille_lascaux.jpg")} id='banner-img'/>
+            <img src={require("./bataille_lascaux.jpg")} alt='George Bataille, important French philosopher of nineteens century' id='banner-img'/>
           </div>
           
           <span className='banner-text'>
@@ -93,25 +69,7 @@ export const App = () => {
 
       <div className='mid-div'></div>
 
-      <article className='content-article'>
-        <section className="content-section">
-          {!!main && <main className='last-post'>
-          <h2>Última atualização:</h2>
-          <h2 className='last-post-title'>{main.items[0].title}</h2>
-          <small>{main.items[0].author.displayName + '~ ' + transformTime(main.items[0].published)}</small>
-           <div className="headline" dangerouslySetInnerHTML={{__html: main.items[0].content}}></div>
-          {/* {console.log(main.items[0].content)} */}
-          </main>}
-
-        <aside>
-          <section className='aside-content'>
-            <h2>Textos passados:</h2>
-            {/* <img  */}
-            {!!main && main.items.map(post => <RecentPost content={post}/>)}
-          </section>
-        </aside>
-        </section> 
-      </article>
+      <Main />
 
       {/* <article className='movies'>
         <section><h2>Movies i do recommend: </h2></section>         
@@ -121,6 +79,3 @@ export const App = () => {
     </div>
   );
 }
-
-
-{/* <RecentPost content={main.items[1]}/> */}
