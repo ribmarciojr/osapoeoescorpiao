@@ -112,15 +112,6 @@ a {
   font-size: 1.2em;
 }
 
-.footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  background-color: #181719;
-  color: #f3f3f9;
-}
-
 .banner-author{
   color: #f3f3f9;
 }

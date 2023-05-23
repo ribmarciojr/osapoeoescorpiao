@@ -3,6 +3,8 @@ import { Header } from '../components/Header/Header';
 import { Main } from '../components/Main/Main';
 import '../components/Main/style.css'
 import './global-styles.css';
+import { LastPost } from '../components/LastPost/LastPost';
+import { Footer } from '../components/Footer/Footer';
 //todo Map of recent post
 //todo Refactor CSS
 //todo call Letterboxd API
@@ -70,12 +72,12 @@ export const App = () => {
       <div className='mid-div'></div>
 
       <Main />
-
+      
       {/* <article className='movies'>
         <section><h2>Movies i do recommend: </h2></section>         
       </article> */}
-
-      <footer className='footer'>&copy;Todos os direitos reservados</footer>
+      <Footer />
+      
     </div>
   );
 }

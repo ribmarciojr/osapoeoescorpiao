@@ -3,6 +3,7 @@ import { Header } from "../Header/Header"
 import '../Header/style.css'
 import './style.css'
 import { Main } from "../Main/Main"
+import { Footer } from "../Footer/Footer"
 
 export const SinglePost = () => {
     const {id} = useParams()
@@ -12,6 +13,7 @@ export const SinglePost = () => {
         <div className="post">
             <Header />
             <Main id={id}/>
+            <Footer />
         </div>
     </div>)
 }
