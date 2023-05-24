@@ -1,0 +1,139 @@
+
+.main-banner img {
+    width: max(300px);
+    height: max(250px);
+    border-radius: 10px;
+    transform: scaleX(-1);
+  }
+  
+  .banner-article {
+    display: flex;
+    background-color: #181719;
+    color: black;
+    /* border: 1px solid black; */
+  }
+  
+  .mid-div {
+    background-color: #181719;
+    width: 100vw;
+    height: 50px;
+  }
+  
+  .banner-blackquote {
+    width: 50vw;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .banner-blackquote::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+  }
+
+  @keyframes pisca {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .banner-section {
+    width: 80%;
+    height: 50vh;
+    background-color: #27242c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f3f3f9;
+  }
+  
+  .banner-text {
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 600px;
+    font-size: 1.2em;
+  }
+  
+  .banner-author{
+    color: #f3f3f9;
+    text-transform: uppercase;
+  }
+
+  @media screen and  (max-width: 767px){
+    .banner-section{
+      flex-direction: column;
+      gap: 20px;
+      justify-content: left;
+      height: 460px;
+    }
+
+    .main-banner img {
+      width: max(200px);
+      height: max(165px);
+      border-radius: 10px;
+      transform: scaleX(-1);
+      margin-top: 30px;
+    }
+
+    .banner-text {
+      /* border: 1px solid pink; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100px;
+      width: 200px;
+      font-size: 1em;
+    }
+
+    .banner-author{
+      margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main-banner img {
+    width: 180px;
+    height: max(160px);
+    border-radius: 10px;
+    transform: scaleX(-1);
+  }
+
+  .banner-section{
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  .banner-text {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1500px){
+  .main-banner img {
+    width: 240px;
+    height: max(200px);
+    border-radius: 10px;
+    transform: scaleX(-1);
+  }
+
+  .banner-section{
+    gap: 0px;
+  }
+
+  .banner-section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}

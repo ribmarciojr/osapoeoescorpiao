@@ -1,4 +1,6 @@
+import { Balancer } from "react-wrap-balancer"
 import { MyImageComponent } from "./MyImageComponent"
+import { useHandleTruncate } from "../Hooks/useHandleTruncate"
 
 export const RecentPost = ({content}) => {
     if(content.content.includes('href="')){
@@ -9,7 +11,8 @@ export const RecentPost = ({content}) => {
         return(
             <div className="recent-post">
               <MyImageComponent myLink={myLink} key={content.title}/>
-              <h2>{content.title}</h2>
+              {/* eslint-disable-next-line */}
+              <h2><Balancer>{screen.width <= 480 ? useHandleTruncate(content.title, 3) : useHandleTruncate(content.title, 10)}</Balancer></h2>
             </div>
           )
     } else{

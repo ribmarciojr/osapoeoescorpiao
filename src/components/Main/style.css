@@ -20,7 +20,8 @@
     justify-self: right;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.0em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
   
   .last-post p, .last-post{
@@ -41,6 +42,7 @@
   
   .recent-post {
     display: flex;
+    justify-content: space-between;
     background-color: gray;
     width: 80%;
     margin: auto;
@@ -56,12 +58,16 @@
   
   .recent-post img {
     width: 20%;
+    margin-right: 10px;
   }
   
   .recent-post h2{
     margin: auto;
-    align-self:center;
+    text-align: center;
     color: #000;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: medium;
   }
   
   
@@ -70,7 +76,8 @@
     justify-self: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.0em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     color: #f3f3f9;
   }
 
@@ -113,7 +120,6 @@
   .last-post img {
     width: 150px;
     height: 120px;
-    
   }
 
   .aside-content, aside{
@@ -129,18 +135,30 @@
     flex-direction: row;
     overflow: scroll;
     justify-content: left;
-    gap: 30px;
-    
+    gap: 30px;    
   }
 
   .aside-content > h2:first-child{
     margin-left: 10px;
   }
+
+  .recent-post{
+    height: 30px;
+  }
+  .recent-post h2{
+    font-size: 0.8em;
+  }
 }
 
-  @media (min-width: 992px) and (max-width: 1500px){
-    .content-section{
-      padding: 10px 20px;
-    }
-  
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .content-section{
+    padding: 0 20px;
   }
+}
+
+@media (min-width: 992px) and (max-width: 1500px){
+  .content-section{
+    padding: 10px 20px;
+  }
+  
+}

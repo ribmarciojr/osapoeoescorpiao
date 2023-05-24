@@ -3,6 +3,7 @@ import { RecentPost } from "../RecentPost"
 import { useHandleTime } from "../../Hooks/useHandleTime"
 import { useState, useEffect } from "react"
 import { LastPost } from "../LastPost/LastPost"
+import { Balancer } from "react-wrap-balancer"
 /* eslint-disable  */ 
 
 export const Main = ({id}) => {
@@ -33,7 +34,7 @@ export const Main = ({id}) => {
         <section className="content-section">
           {!!main && !id && 
           <main className='last-post'>
-            <h2>Última atualização:</h2>
+            <h2><Balancer>Última atualização:</Balancer></h2>
             <h2 className='last-post-title'>{main.items[0].title}</h2>
       
             <small>{main.items[0].author.displayName + '~ ' + useHandleTime(main.items[0].published)}</small>
@@ -49,7 +50,7 @@ export const Main = ({id}) => {
           </main>}
     <aside>
       <section className='aside-content'>
-        <h2>Textos passados:</h2>          
+        <h2><Balancer>Textos passados:</Balancer></h2>          
         <div className="every-aside">{!!main && main.items.map(post =>  {
           if(post.id != id){
             return <Link to={`/explore/${post.id}`}><RecentPost content={post}/></Link>
