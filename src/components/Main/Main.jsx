@@ -51,11 +51,11 @@ export const Main = ({id}) => {
     <aside>
       <section className='aside-content'>
         <h2><Balancer>Textos passados:</Balancer></h2>          
-        <div className="every-aside">{!!main && main.items.map(post =>  {
+        <div className="every-aside">{!!main ? main.items.map(post =>  {
           if(post.id != id){
-            return <Link to={`/explore/${post.id}`}><RecentPost content={post}/></Link>
+            return <Link to={`/explore/${post.id}`} onClick={() => {window.scrollTo(0,0)}}><RecentPost content={post}/></Link>
           }  
-        })}</div>
+        }) : <h1 style={{color: 'white', margin: 'auto'}}>Loading...</h1>}</div>
       </section>
     </aside>
     </section> 
