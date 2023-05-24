@@ -45,7 +45,7 @@ export const Main = ({id}) => {
             <h2>Última atualização:</h2>
             <h2 className='last-post-title'>{selected.title}</h2>
       
-            <small>{selected.author.displayName + '~ ' + useHandleTime(selected.published)}</small>
+            <small className="time-and-author">{selected.author.displayName + '~ ' + useHandleTime(selected.published)}</small>
             <div className="headline" dangerouslySetInnerHTML={{__html: selected.content}}></div>
           </main>}
     <aside>

@@ -70,7 +70,6 @@
     font-size: medium;
   }
   
-  
   .aside-content > h2:first-child{
     display: flex;
     justify-self: center;
@@ -112,6 +111,13 @@
   }
 
 @media screen and  (max-width: 767px){
+  .headline {
+    display: block;
+    width: 240px;
+    position: relative;
+    left: -50px;
+  }
+
   .content-section{
     flex-direction: column;
     align-items: center;
@@ -130,20 +136,38 @@
     font-size: 0.8em;
   }
 
+  .last-post > h2:first-child{
+    position: relative;
+    left: -50px;
+    font-size: 1.6em;
+  }
+
+  .last-post-title {
+    font-size: 1.2em;
+  }
+
+  .time-and-author {
+    font-size: 0.6em;
+  }
+
   .every-aside {
     display: flex;
     flex-direction: row;
     overflow: scroll;
     justify-content: left;
-    gap: 30px;    
+    gap: 30px;
+    margin-left: 9px;    
   }
 
   .aside-content > h2:first-child{
     margin-left: 10px;
+    font-size: 1.6em;
   }
 
   .recent-post{
     height: 30px;
+    width: 180px;
+
   }
   .recent-post h2{
     font-size: 0.8em;
