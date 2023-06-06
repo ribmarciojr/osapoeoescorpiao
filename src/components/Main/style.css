@@ -13,6 +13,7 @@
     background-color: #27242c;
     gap: 10%;
     padding: 10px 0;
+    padding-bottom: 30px;
   }
   
   .last-post > h2:first-child{
@@ -27,7 +28,7 @@
   .last-post p, .last-post{
     color: #f3f3f9;
     font-family:'Libre Baskerville', serif;
-    font-size: 1.2em;
+    font-size: 1rem;
   }
   
   .last-post img {
@@ -37,7 +38,7 @@
   }
   
   .last-post-title {
-    font-size: 1.6em;
+    font-size: 1.5rem;
   }
   
   .recent-post {
@@ -47,7 +48,7 @@
     width: 80%;
     margin: auto;
     padding: 20px;
-    border: 1px solid pink;
+    border: 2px solid #b4936e;
     margin-bottom: 20px;
     transition: transform 250ms ease-in-out;
   }
@@ -78,6 +79,10 @@
     margin-bottom: 30px;
     margin-top: 20px;
     color: #f3f3f9;
+  }
+
+  .separator > a {
+    cursor: default;
   }
 
   article{
@@ -133,13 +138,14 @@
   }
 
   .last-post p{
-    font-size: 0.8em;
+    font-size: 1rem;
   }
 
   .last-post > h2:first-child{
     position: relative;
-    left: -50px;
+    left: -70px;
     font-size: 1.6em;
+    width: 300px;
   }
 
   .last-post-title {
@@ -156,7 +162,8 @@
     overflow: scroll;
     justify-content: left;
     gap: 30px;
-    margin-left: 9px;    
+    margin-left: 9px;
+    box-shadow: -20px 2px 40px rgba(0, 0, 0, 0.815);   
   }
 
   .aside-content > h2:first-child{
@@ -176,13 +183,13 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .content-section{
-    padding: 0 20px;
+    padding: 0 10px 20px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1500px){
   .content-section{
-    padding: 10px 20px;
+    padding: 10px 30px 20px;
   }
   
 }

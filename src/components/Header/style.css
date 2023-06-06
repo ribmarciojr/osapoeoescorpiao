@@ -28,7 +28,7 @@ ul{
 }
   
 .menu li:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.136);
 }
 
 @media screen and  (max-width: 767px){
