@@ -49,10 +49,9 @@ export const App = () => {
 
   return (
     <div className="App">
-      
       <Header />
       <div className='title'>
-        <h1>O sapo e o escorpião</h1>
+        <h1>O sapo e o escor&gt;pião</h1>
       </div>
 
       <div className='mid-div' id="first-mid-div"></div>
@@ -60,14 +59,9 @@ export const App = () => {
       <Banner />
 
       <div className='mid-div'></div>
-
+      
       <Main />
-      
-      {/* <article className='movies'>
-        <section><h2>Movies i do recommend: </h2></section>         
-      </article> */}
       <Footer />
-      
     </div>
   );
 }

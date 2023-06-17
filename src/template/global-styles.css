@@ -7,6 +7,16 @@
 #f3f3f9
 */
 
+@font-face {
+  font-family: 'Black Rider';
+  src: local('Black Rider') , url(../Fonts/Black-Rider/Black\ Rider.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: 'Road Rage';
+  src: local('Road Rage'), url(../Fonts/Black-Rider/Road_Rage.otf) format('opentype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +40,9 @@ a {
 }
 
 .App h1 {
-  font-size: 4em;
+  font-size: 5rem;
+  font-family: "Road Rage", serif;
+  color: rgb(243 223 72);
 }
 
 .App {
@@ -57,4 +69,8 @@ a {
   color: burlywood;
 }
 
-
+@media screen and (max-width: 480px) {
+  .App h1 {
+    font-size: 4rem;
+  }
+}

@@ -19,8 +19,8 @@
   .last-post > h2:first-child{
     display: flex;
     justify-self: right;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2.0em;
+    font-family: 'Rockwell';
+    font-size: 2.0rem;
     margin-bottom: 30px;
     margin-top: 20px;
   }
@@ -29,6 +29,7 @@
     color: #f3f3f9;
     font-family:'Libre Baskerville', serif;
     font-size: 1rem;
+    line-height: 1.5rem;
   }
   
   .last-post img {
@@ -39,6 +40,9 @@
   
   .last-post-title {
     font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none;
   }
   
   .recent-post {
@@ -66,15 +70,15 @@
     margin: auto;
     text-align: center;
     color: #000;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Rockwell', serif;
     font-weight: 400;
-    font-size: medium;
+    font-size: 1.2rem;
   }
   
   .aside-content > h2:first-child{
     display: flex;
     justify-self: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Rockwell;
     font-size: 2.0em;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -179,6 +183,7 @@
   .recent-post h2{
     font-size: 0.8em;
   }
+  
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
