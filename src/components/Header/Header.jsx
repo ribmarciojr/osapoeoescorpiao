@@ -6,10 +6,10 @@ export const Header = () => {
         <header className='sticky'>
         <nav className='menu'>
           <ul className='menu-list'>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to="/explore">Explore</Link></li>
-            <li>Movies</li>
-            <li>Contact</li>
+            <li><Link to='/'>Início</Link></li>
+            <li><Link to="/explore">Acervo</Link></li>
+            <li>Sobre mim</li>
+            <li><Link to='/contact'>Contato</Link></li>
           </ul>
         </nav>
       </header>

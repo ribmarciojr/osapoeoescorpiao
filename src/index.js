@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Explore } from './components/Explore';
 import { SinglePost } from './components/SinglePost/SinglePost';
+import {Contact} from '../src/components/Contact/Contact'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +16,7 @@ root.render(
         <Route path='/' element={<App />} />
         <Route path='/explore' element={<Explore />} />
         <Route path='/explore/:id' element={<SinglePost />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

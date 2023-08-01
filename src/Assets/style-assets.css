@@ -1,0 +1,16 @@
+:root {
+    --main-background: #27242c;
+    --secondary-background: #181719;
+    
+    --text: #f3f3f9;
+}
+
+@font-face {
+    font-family: 'Black Rider';
+    src: local('Black Rider') , url(../Fonts/Black-Rider/Black\ Rider.ttf) format('truetype')
+  }
+  
+  @font-face {
+    font-family: 'Road Rage';
+    src: local('Road Rage'), url(../Fonts/Black-Rider/Road_Rage.otf) format('opentype');
+  }

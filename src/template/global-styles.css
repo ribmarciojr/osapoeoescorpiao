@@ -1,13 +1,16 @@
+@import url('../Assets/style-assets.css');
+
 /* Colors : 
 
-#181719
+#181719 
 #27242c 
 #3d3a41
 #ffffff
 #f3f3f9
 */
 
-@font-face {
+
+/* @font-face {
   font-family: 'Black Rider';
   src: local('Black Rider') , url(../Fonts/Black-Rider/Black\ Rider.ttf) format('truetype')
 }
@@ -15,7 +18,7 @@
 @font-face {
   font-family: 'Road Rage';
   src: local('Road Rage'), url(../Fonts/Black-Rider/Road_Rage.otf) format('opentype');
-}
+} */
 
 * {
   margin: 0;
