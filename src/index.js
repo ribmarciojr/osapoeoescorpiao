@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App } from './template/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Explore } from './components/Explore';
+import { Explore } from './components/Collection/Explore';
 import { SinglePost } from './components/SinglePost/SinglePost';
 import {Contact} from '../src/components/Contact/Contact'
 

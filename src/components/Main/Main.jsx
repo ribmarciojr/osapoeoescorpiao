@@ -62,7 +62,7 @@ export const Main = ({id}) => {
             if(post.id != id){
               return <Link to={`/explore/${post.id}`} onClick={() => {window.scrollTo(0,0)}}><RecentPost content={post}/></Link>
             }}) : <h1 style={{color: 'white', margin: 'auto'}}>Loading...</h1>}
-            {!!main && <div className="recent-post" onClick={() => {handleLoadNext(main.nextPageToken)}}>Load More</div>}  
+            {/* {!!main && <div className="recent-post" onClick={() => {handleLoadNext(main.nextPageToken)}}>Load More</div>}   */}
           </div>
       </section>
     </aside>

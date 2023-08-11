@@ -24,10 +24,6 @@ body, html {
     max-width: 1700px;
 }
 
-form {
-    width: 1000px;   
-}
-
 .alternative-social{
     display: flex;
     justify-content: left;
@@ -50,7 +46,7 @@ form {
     color: goldenrod;
 }
 
-input:not(#msg) {
+input:not(#msg):not(#filter) {
     width: 15.625rem;
     line-height: 1.25rem;
     padding: .125rem;
@@ -71,6 +67,22 @@ input:not(#msg) {
     top: 6px;
     left: 2px;
 } */
+form {
+    width: 1000px;   
+}
+
+form button {
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: blue;
+}
 
 legend {
     font-size: 1.6rem;
@@ -86,3 +98,9 @@ label {
     margin: 30px 0 10px 0;
 }
 
+@media screen and (max-width: 460px) {
+    
+    #msg {
+        width: 320px;
+    }
+}
