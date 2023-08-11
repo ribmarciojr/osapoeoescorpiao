@@ -49,7 +49,7 @@ export const Explore = () => {
                 <main className="explore-main">
                     <h1>Acervo Completo:</h1>
                     
-                    <input type="search" id="filter" onKeyDown={e => {
+                    <input placeholder="Filtre por título" type="search" id="filter" onKeyDown={e => {
                         if(e.key === "Enter"){
                             handleFilter(e)
                         }
