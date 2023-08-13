@@ -3,16 +3,8 @@ import { Header } from '../components/Header/Header';
 import { Main } from '../components/Main/Main';
 import '../components/Main/style.css'
 import './global-styles.css';
-import { LastPost } from '../components/LastPost/LastPost';
 import { Footer } from '../components/Footer/Footer';
 import { Banner } from '../components/Banner/Banner';
-//done Map of recent post
-//todo Refactor CSS
-//todo call Letterboxd API
-//todo main page text format 
-//done ajeitar time de "2023-05-18T05:53:00-07:00" para "2023-05-18 07:00"
-//todo create explore content 
-//todo finish responsive css;
 
 export const App = () => {
   //const url = `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_BLOG_ID}?key=${process.env.REACT_APP_API_KEY}`

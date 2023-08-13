@@ -4,11 +4,13 @@ import "./style.css"
 import { Link } from "react-router-dom"
 import { RecentPost } from "../RecentPost"
 import { Footer } from "../Footer/Footer"
+import { Skeleton } from "@mui/material"
 
 export const Explore = () => {
     const postsPage = `https://www.googleapis.com/blogger/v3/blogs/${process.env.REACT_APP_BLOG_ID}/posts?key=${process.env.REACT_APP_API_KEY}&maxResults=50`
     const [posts, setPosts] = useState()
     const [filteredPosts, setFilteredPosts] = useState()
+    const template = [0,1,2,3,4,5,6,7,8,9,10]
 
     useEffect(() => {
         fetch(postsPage)
@@ -63,11 +65,15 @@ export const Explore = () => {
                     <button onClick={e => handleFilter(e)}>Buscar</button>
                     
                     <section className="all-collection">
-                        {(!!posts && !filteredPosts && posts.map(post => {
+                        {
+                            ((!!posts && !filteredPosts) ? posts.map(post => {
+                                    return <Link to={`/explore/${post.id}`} onClick={() => {window.scrollTo(0,0)}}><RecentPost content={post}/></Link>
+                            }) : template.map(post => {
+                                    return <Skeleton variant="rectangular" width={240} height={320} />
+                            }) ) || (!!posts && filteredPosts.map(post => {
                                 return <Link to={`/explore/${post.id}`} onClick={() => {window.scrollTo(0,0)}}><RecentPost content={post}/></Link>
-                        })) || (!!posts && filteredPosts.map(post => {
-                            return <Link to={`/explore/${post.id}`} onClick={() => {window.scrollTo(0,0)}}><RecentPost content={post}/></Link>
-                        }))}             
+                            }))
+                        }             
                     </section>
                 </main>
             </article>
