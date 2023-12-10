@@ -43,7 +43,7 @@ export const App = () => {
     <div className="App">
       <Header />
       <div className='title'>
-        <h1>O sapo e o escor&gt;pião</h1>
+        <h1>O sapo e o escorpião</h1>
       </div>
 
       <div className='mid-div' id="first-mid-div"></div>
